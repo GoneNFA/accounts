@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{db84a349-e3cb-413f-ba0c-7b6df59b1d31}</ProjectGuid>
+    <ApexVersion>42.0</ApexVersion>
+    <Name>accounts</Name>
+    <AssemblyName>accounts</AssemblyName>
+    <RootNamespace>accounts</RootNamespace>
+    <ProjectVersion>6</ProjectVersion>
+    <PackageVersion>1.15.2.4</PackageVersion>
+    <SyncOption>True</SyncOption>
+    <AntSupport>False</AntSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Folder Include="AnonymousApex" />
+    <Folder Include="Soql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aura/AccountsList/AccountsList.cmp">
+      <PhysicalRelativePath>src/aura/AccountsList/AccountsList.cmp</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>AccountsList</BundleName>
+      <LightningType>Component</LightningType>
+    </Compile>
+    <Compile Include="aura/AccountsList/AccountsListController.js">
+      <PhysicalRelativePath>src/aura/AccountsList/AccountsListController.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>AccountsList</BundleName>
+      <LightningType>Controller</LightningType>
+    </Compile>
+    <Compile Include="aura/AccountsList/AccountsListHelper.js">
+      <PhysicalRelativePath>src/aura/AccountsList/AccountsListHelper.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>AccountsList</BundleName>
+      <LightningType>Helper</LightningType>
+    </Compile>
+    <Compile Include="classes/AccountsController.cls">
+      <PhysicalRelativePath>src/classes/AccountsController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="classes/AccountsController.cls-meta.xml">
+      <PhysicalRelativePath>src/classes/AccountsController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName />
+      <DependentUpon>classes/AccountsController.cls</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>
