@@ -18,6 +18,9 @@
   <ItemGroup>
     <Folder Include="AnonymousApex" />
     <Folder Include="Soql" />
+    <Folder Include="aura\" />
+    <Folder Include="aura\AccountsList\" />
+    <Folder Include="classes\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aura/AccountsList/AccountsList.cmp">
@@ -39,15 +42,16 @@
       <LightningType>Helper</LightningType>
     </Compile>
     <Compile Include="classes/AccountsController.cls">
-      <PhysicalRelativePath>src/classes/AccountsController.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
       <SubType>Class</SubType>
+      <PhysicalRelativePath>src/classes/AccountsController.cls</PhysicalRelativePath>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="classes/AccountsController.cls-meta.xml">
-      <PhysicalRelativePath>src/classes/AccountsController.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
       <SubType>Metadata</SubType>
-      <PackageName />
+      <PhysicalRelativePath>src/classes/AccountsController.cls-meta.xml</PhysicalRelativePath>
       <DependentUpon>classes/AccountsController.cls</DependentUpon>
     </None>
   </ItemGroup>
